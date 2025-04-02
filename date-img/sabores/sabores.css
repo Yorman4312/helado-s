@@ -1,0 +1,150 @@
+:root{
+    --font-prin: rgb(50, 50, 50);
+    --font-sec: rgb(10, 10, 10);
+
+    --font-111: rgb(180, 180, 180);
+    --font-222: rgb(210, 210, 210);
+
+    --back-degrade: rgb(80, 140, 190, .65);
+
+    --back-prin: rgb(220, 220, 220);
+    --back-sec01: rgb(80, 140, 190);
+    --back-sec11: rgb(80, 140, 190, 0.5);
+    --back-sec02: rgb(230, 125, 230);
+    --back-sec22: rgb(230, 125, 230, 0.5);
+}
+
+/* UNIVERSAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--font-sec);
+    font-family: "Outfit", sans-serif;
+}
+
+h1{
+    font-size: 3.5vh;
+}
+
+h2{
+    font-size: 2.8vh;
+}
+
+h3{
+    font-size: 2.6vh;
+}
+
+h4{
+    font-size: 2.5vh;
+}
+
+h5{
+    font-size: 2vh
+}
+
+h6{
+    font-size: 1.8vh;
+}
+
+li, p, a{
+    color: var(--font-prin);
+    font-family: "Outfit", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-size: 2.5vh;
+}
+
+/* SECCIÓN PRINCIPAL */
+section .m {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6vh;
+}
+
+section .m .back {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 10px;
+    border-radius: 15px;
+    background: radial-gradient(circle, var(--back-sec11) 0%, var(--back-sec22) 100%);
+}
+
+section .m .back .title h2 {
+    padding: 5px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* SECCIÓN SABORES */
+section .m .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+section .m .cards .sb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    max-width: 225px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px var(--font-sec);
+    transition: transform 0.3s;
+}
+
+section .m .cards .sb:hover {
+    transform: scale(1.03);
+}
+
+section .m .cards .sb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+section .m .cards .sb .text {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+section .m .cards .sb h3 {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* EESPONSIVE */
+@media (max-width: 1024px) {
+    section .m .cards .sb {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    section .back {
+        width: 100%;
+    }
+
+    section .m .cards .sb {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    section .m .cards .sb {
+        width: 90%;
+    }
+}

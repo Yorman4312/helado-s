@@ -1,0 +1,228 @@
+:root{
+    --font-prin: rgb(50, 50, 50);
+    --font-sec: rgb(10, 10, 10);
+
+    --font-111: rgb(180, 180, 180);
+    --font-222: rgb(210, 210, 210);
+
+    --back-degrade: rgb(80, 140, 190, .65);
+
+    --back-prin: rgb(220, 220, 220);
+    --back-sec01: rgb(80, 140, 190);
+    --back-sec11: rgb(80, 140, 190, 0.6);
+    --back-sec02: rgb(230, 125, 230, 0.8);
+    --back-sec22: rgb(230, 125, 230, 0.25);
+}
+
+/* UNIVERSAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--font-sec);
+    font-family: "Outfit", sans-serif;
+}
+
+h1{
+    font-size: 5vh;
+}
+
+h2{
+    font-size: 2.8vh;
+}
+
+h3{
+    font-size: 2.6vh;
+}
+
+h4{
+    font-size: 2.5vh;
+}
+
+h5{
+    font-size: 2vh
+}
+
+h6{
+    font-size: 1.8vh;
+}
+
+li, p, a, label, input{
+    color: var(--font-prin);
+    font-family: "Outfit", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-size: 2.5vh;
+}
+
+/* MAIN */
+body{
+    margin: 0;
+    padding: 0;
+    background: var(--back-sec22);
+    background: radial-gradient(circle, var(--back-sec22) 0%, var(--back-sec11));
+    background-attachment: fixed;
+}
+
+.formulario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background: var(--back-prin); */
+    backdrop-filter: blur(50px);
+    box-shadow: 0px 0px 10px 0px var(--font-prin);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.formulario .img{
+    width: 50%;
+    padding: 10px;
+    /*  */
+    a img{
+        /* width: 100%; */
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.formulario .contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-left: 1px solid var(--font-prin);
+    /*  */
+    .title{
+        text-align: center;
+        /*  */
+        h1 .aa{
+            font-size: 5vh;
+            border-bottom: 5px solid;
+            border-image: linear-gradient(45deg, var(--back-sec01), var(--back-sec02)) 1;
+            transition: all .3s;
+            /*  */
+            &:hover{
+                border-bottom: 8px solid;
+                border-image: linear-gradient(45deg, var(--back-sec02), var(--back-sec01)) 1;
+            }
+        }
+    }
+    /*  */
+    form .mail{
+        width: 100%;
+        position: relative;
+        margin: 30px 0;
+        border-bottom: 2px solid var(--font-prin);
+        /*  */
+        .span{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            /*  */
+            span img{
+                width: 25px;
+                height: auto;
+                object-fit: cover;
+            }
+            /*  */
+            input{
+                width: 100%;
+                height: 35px;
+                font-size: 2.5vh;
+                border: none;
+                background: none;
+                outline: none;
+            }
+        }
+    }
+    /*  */
+    .button{
+        position: relative;
+        top: -5px;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 2.5vh;
+        border-radius: 15px;
+        border: 3px solid var(--back-sec02);
+        background: var(--back-sec22);
+        transition: all .2s;
+        /*  */
+        &:hover{
+            background: var(--back-sec02);
+            cursor: pointer;
+        }
+    }
+    /*  */
+    .iniciar p{
+        margin: 10px 0;
+        /*  */
+        a{
+            border-bottom: 2px solid transparent;
+            transition: all .2s;
+            /*  */
+            &:hover{
+                border-bottom: 2px solid var(--font-prin);
+                cursor: pointer;
+            }
+        }
+    }
+    /*  */
+    .volver{
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        /*  */
+        a{
+            border-bottom: 2px solid var(--font-prin);
+            transition: all .2s;
+            /*  */
+            &:hover{
+                color: var(--font-sec);
+                border-bottom: 2px solid var(--font-sec);
+            }
+        }
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width:1350px) {
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contain{
+        width: 100%;
+        border-left: none;
+    }
+}
+
+@media (max-width:768px) {
+    
+}
+
+@media (max-width:480px) {
+    
+}

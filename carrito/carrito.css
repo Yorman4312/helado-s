@@ -1,0 +1,285 @@
+:root{
+    --font-prin: rgb(50, 50, 50);
+    --font-sec: rgb(10, 10, 10);
+
+    --font-111: rgb(180, 180, 180);
+    --font-222: rgb(210, 210, 210);
+
+    --back-degrade: rgb(80, 140, 190, .65);
+
+    --back-prin: rgb(220, 220, 220);
+    --back-sec01: rgb(80, 140, 190);
+    --back-sec11: rgb(80, 140, 190, 0.5);
+    --back-sec02: rgb(230, 125, 230);
+    --back-sec22: rgb(230, 125, 230, 0.5);
+}
+
+/* UNIVERSAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--font-sec);
+    font-family: "Outfit", sans-serif;
+}
+
+h1{
+    font-size: 3.5vh;
+}
+
+h2{
+    font-size: 2.8vh;
+}
+
+h3{
+    font-size: 2.6vh;
+}
+
+h4{
+    font-size: 2.5vh;
+}
+
+h5{
+    font-size: 2vh
+}
+
+h6{
+    font-size: 1.8vh;
+}
+
+li, p, a{
+    color: var(--font-prin);
+    font-family: "Outfit", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-size: 2.5vh;
+}
+
+/* MAIN */
+main{
+    margin: 0;
+    padding: 5%;
+    /* background-color: green; */
+}
+
+article{
+    margin-top: 5vh;
+}
+
+section{
+    margin: 0;
+    padding: 2%;
+}
+
+section .carrito{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    /* background-color: yellow; */
+}
+section .carrito .product{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border-radius: 20px;
+    background-color: var(--font-222);
+    /*  */
+    .img{
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*  */
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+    }
+    /*  */
+    .desc{
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        /*  */
+        .des{
+            padding: 10px 20px;
+        border-bottom: 2px solid var(--font-111);
+            /* background-color: orange; */
+            /*  */
+            h2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            /*  */
+            ul li{
+                list-style: inside;
+            }
+        }
+        /*  */
+        .compra{
+            padding: 10px 20px;
+            display: flex;
+            flex-direction: row;
+            /* background-color: blue; */
+            /*  */
+            ul{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* background-color: yellow; */
+                /*  */
+                li{
+                    list-style: inside;
+                }
+            }
+            /*  */
+            .crud{
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                /* background-color: violet; */
+                /*  */
+                button{
+                    padding: 5px;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 5px;
+                    transition: all .2s;
+                    /*  */
+                    span img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                    /*  */
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                /*  */
+                .ed{
+                    border: 2px solid var(--back-sec01);
+                    /*  */
+                    &:hover{
+                        background: var(--back-sec11);
+                    }
+                }
+                /*  */
+                .de{
+                    border: 2px solid rgb(245, 80, 80);
+                    /*  */
+                    &:hover{
+                        background: rgb(245, 80, 80, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    article{
+        margin-top: 20vh;
+    }
+
+    section .carrito .product{
+        display: flex;
+        flex-direction: column;
+        /*  */
+        .img{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*  */
+            img{
+                width: 50%;
+            }
+        }
+    }
+
+    section .carrito .product .desc .compra{
+        display: flex;
+        flex-direction: column;
+        /*  */
+        .crud{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            /*  */
+            button{
+                width: 100px;
+                height: 70px;
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    article{
+        margin-top: 30vh;
+    }
+
+    section .carrito .product{
+        display: flex;
+        flex-direction: column;
+        /*  */
+        .img{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*  */
+            img{
+                width: 50%;
+            }
+        }
+    }
+
+    section .carrito .product .desc .compra{
+        display: flex;
+        flex-direction: column;
+        /*  */
+        .crud{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+            /*  */
+            button{
+                width: 100px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    section .carrito .product .desc .compra{
+        display: flex;
+        flex-direction: column;
+        /*  */
+        .crud{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}

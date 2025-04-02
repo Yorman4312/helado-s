@@ -1,0 +1,269 @@
+:root{
+    --font-prin: rgb(50, 50, 50);
+    --font-sec: rgb(10, 10, 10);
+
+    --font-111: rgb(180, 180, 180);
+    --font-222: rgb(210, 210, 210);
+
+    --back-degrade: rgb(80, 140, 190, .65);
+
+    --back-prin: rgb(220, 220, 220);
+    --back-sec01: rgb(80, 140, 190);
+    --back-sec11: rgb(80, 140, 190, 0.5);
+    --back-sec02: rgb(230, 125, 230);
+    --back-sec22: rgb(230, 125, 230, 0.5);
+}
+
+/* UNIVERSAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--font-sec);
+    font-family: "Outfit", sans-serif;
+}
+
+h1{
+    font-size: 3.5vh;
+}
+
+h2{
+    font-size: 2.8vh;
+}
+
+h3{
+    font-size: 2.6vh;
+}
+
+h4{
+    font-size: 2.5vh;
+}
+
+h5{
+    font-size: 2vh
+}
+
+h6{
+    font-size: 1.8vh;
+}
+
+li, p, a{
+    color: var(--font-prin);
+    font-family: "Outfit", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-size: 2.5vh;
+}
+
+/* BODY */
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+/* CARRUSEL */
+.carrusel {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.carrusel ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 16s infinite alternate ease-in-out;
+}
+
+.carrusel ul li {
+    list-style: none;
+    width: 100%;
+}
+
+.carrusel ul li img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: contain;
+}
+
+/* ANIMACIÓN DEL CARRUSEL */
+/* @keyframes slide {
+    0%, 20% { margin-left: 0%; }
+    25%, 45% { margin-left: -100%; }
+    50%, 70% { margin-left: -200%; }
+    75%, 95% { margin-left: -300%; }
+} */
+
+/* MAIN */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 14vh;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 3%;
+}
+
+/* ESTILOS DEL MENÚ */
+section .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section .menu h1 {
+    font-size: 3rem;
+    border-bottom: 6px solid;
+    border-image: linear-gradient(45deg, var(--back-sec01), var(--back-sec02)) 1;
+}
+
+/* SECCIÓN PRINCIPAL */
+section .m {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section .m .back {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 10px;
+    border-radius: 15px;
+    background: radial-gradient(circle, var(--back-sec11) 0%, var(--back-sec22) 100%);
+}
+
+section .m .back .title h2 {
+    padding: 5px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+/* SECCIÓN CON TARJETAS */
+section .m .hld {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 5px;
+}
+
+section .m .hld .holis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px var(--font-sec);
+    transition: transform 0.3s;
+}
+
+section .m .hld .holis:hover {
+    transform: scale(1.03);
+}
+
+section .m .hld .holis .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+section .m .hld .holis .text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* ESTILOS RESPONSIVOS */
+@media (max-width: 1024px) {
+    main{
+    margin-top: 22vh;
+    }
+
+    .carrusel {
+        height: 70vh;
+    }
+
+    section {
+        margin-top: -20vh;
+    }
+
+    section .menu h1 {
+        font-size: 2.5rem;
+    }
+
+    section .m .hld {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    section .m .hld .holis {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    main{
+        margin-top: 28vh;
+    }
+
+    section {
+        margin-top: 0;
+        padding: 1%;
+    }
+
+    .carrusel {
+        height: 50vh;
+    }
+
+    section .menu h1 {
+        font-size: 2rem;
+    }
+
+    section .back {
+        width: 100%;
+    }
+
+    section .m .hld .holis {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .carrusel {
+        height: 40vh;
+    }
+
+    main {
+        margin-top: 40vh;
+    }
+
+    section .menu h1 {
+        font-size: 1.8rem;
+    }
+}
