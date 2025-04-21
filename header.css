@@ -112,12 +112,13 @@ header .search img {
     height: auto;
     margin: 0 5px;
     padding: 5px;
-    border-radius: 25px;
+    border-radius: 13px;
     background: var(--back-sec11);
-    transition: all .3s;
+    transition: all .5s;
 }
 
 header .search img:hover {
+    border-radius: 20px;
     cursor: pointer;
     background: var(--back-sec01);
 }
@@ -125,7 +126,8 @@ header .search img:hover {
 /* RESPONSIVE */
 @media (max-width: 1024px) {
     header {
-        flex-direction: row;
+        width: 100%;
+        flex-direction: column;
         flex-wrap: wrap;
         padding: 10px;
     }
@@ -150,9 +152,9 @@ header .search img:hover {
         }
     }
     header .search a img{
-        width: 70px;
+        width: 50px;
         margin: 10px;
-        padding: 10px;
+        padding: 5px;
         border-radius: 50%;
     }
 }
@@ -184,7 +186,8 @@ header .search img:hover {
 
     }
     header .search a img {
-        width: 60px;
+        width: 40px;
+        padding: 5px;
     }
 }
 

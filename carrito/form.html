@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/date-img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/carrito/form.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+    <title>Helado's - Agregar Producto</title>
+</head>
+<body>
+    <div class="background">
+        <div class="formulario">
+            <div class="contain">
+                <div class="title">
+                    <h1><a class="aa" href="#">Agregar al Carrito</a></h1>
+                </div>
+                <!--  -->
+                <form action="/carrito/carrito.html" method="post">
+                    <div class="mail">
+                        <div class="span">
+                            <label for="name">A nombre de:</label>
+                            <input type="text" name="name" id="name" placeholder="Nombre" required maxlength="50">
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="mail">
+                        <div class="span">
+                            <label for="ball">Sabores de Helado</label>
+                            <select name="ice-cream-ball" id="ball" required>
+                                <option value="1">Vainilla</option>
+                                <option value="2">Chocolate</option>
+                                <option value="3">Mora</option>
+                                <option value="4">Tres Leches</option>
+                                <option value="5">Maracuya</option>
+                                <option value="6">Arequipe</option>
+                                <option value="7">Menta</option>
+                                <option value="8">Brownie</option>
+                                <option value="9">Nucita</option>
+                                <option value="10">Frutos Rojos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="mail">
+                        <div class="span">
+                            <label for="salsas">Salsas</label>
+                            <select name="salsas" id="salsas" required>
+                                <option value="1">Arequipe</option>
+                                <option value="2">Lecherita</option>
+                                <option value="3">Mora</option>
+                                <option value="4">Chocolate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="mail">
+                        <div class="span">
+                            <label for="number">Cantidad</label>
+                            <input type="number" name="number" id="number" placeholder="1, 2, 3,.." required>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="buttons">
+                        <button class="btn-1" type="submit"><span><img src="/date-img/icons/plus.png" alt="Agregar"></span>Agregar</button>
+                        <button class="btn-2" type="reset"><span><img src="/date-img/icons/restart.png" alt="Restart"></span>Restaurar fomulario</button>
+                    </div>
+                    <!--  -->
+                    <div class="volver">
+                        <a href="/index.html"><span><img src="/date-img/icons/back.png" alt=""></span>Volver al inicio</a>
+                        <a href="/carrito/carrito.html"><span><img src="/date-img/icons/car.png" alt=""></span>Ver el carrito</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

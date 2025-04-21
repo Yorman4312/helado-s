@@ -156,17 +156,22 @@ section .carrito .product{
                     padding: 5px;
                     width: 40px;
                     height: 40px;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     transition: all .2s;
                     /*  */
                     span img{
                         width: 100%;
                         height: 100%;
                         object-fit: contain;
+                        transition: all .2s;
                     }
                     /*  */
                     &:hover{
                         cursor: pointer;
+                        /*  */
+                            span img{
+                                transform: scale(1.1);
+                            }
                     }
                 }
                 /*  */

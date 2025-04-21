@@ -61,15 +61,18 @@ li, p, small, a{
 footer .yoyo{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     width: 100%;
-    height: auto;
-    padding: 5% 10%;
-    background-color: var(--back-sec22);
+    height: 55vh;
+    padding: 1%;
+    background-color: rgb(202, 87, 156);
     justify-content: space-between;
+    /*  */
+    p, a, li, small, h3{
+        color: #fff;
+    }
 }
 
-.who, .info, .redes {
+.who, .info, .yuyu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +82,22 @@ footer .yoyo{
     width: 33%;
 }
 
-.info .location, .info .contact {
+.yuyu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3vh;
+    text-align: center;
+    border-left: 2px solid var(--back-sec02);
+    border-right: 2px solid var(--back-sec02);
+    /*  */
+        p a {
+            border-bottom: 1px solid #fff;
+        }
+}
+
+.info .location, .info .contact, .info .redes {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,13 +118,8 @@ footer .yoyo{
     width: 30px;
     height: auto;
     padding: 5px;
-    background: var(--back-sec22);
+    background: rgb(240, 100, 180);
     border-radius: 50%;
-}
-
-.info {
-    border-left: 2px solid var(--back-sec02);
-    border-right: 2px solid var(--back-sec02);
 }
 
 .redes ul {
@@ -124,46 +137,31 @@ footer .yoyo{
     height: auto;
     padding: 5px;
     border-radius: 50%;
-    background: var(--back-sec22);
+    background: rgb(240, 100, 180);
     transition: background 0.3s;
 }
 
 .redes ul li a img:hover {
-    background: var(--back-sec02);
-}
-
-.yuyu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3vh;
-    text-align: center;
-    background-color: var(--back-sec22);
-    border-top:  solid var(--back-sec02);
-}
-
-.redes .yuyu p a {
-    width: 100%;
-    border-top: 1px solid var(--font-prin);
-    transition: color 0.2s, border-bottom 0.2s;
-}
-
-.yuyu p a:hover {
-    color: var(--font-sec);
-    border-bottom: 1px solid var(--font-sec);
+    background: rgb(240, 140, 180);
 }
 
 /* RESPONSIVE */
 @media (max-width:1024px) {
+    footer{
+        width: 100%;
+    }
+
     footer .yoyo{
+        width: 100%;
+        height: auto;
         flex-direction: column;
         align-items: center;
         padding: 0 5%;
     }
 
-    .who, .info, .redes {
+    .who, .info, .yuyu {
         width: 100%;
+        /* height: 10vh; */
         border: none;
         padding:25px 100px;
         /*  */
@@ -195,6 +193,7 @@ footer .yoyo{
     }
 
     .yuyu {
+        border-top: 2px solid var(--back-sec02);
         padding: 30px 100px;
         /*  */
             p{
@@ -204,7 +203,7 @@ footer .yoyo{
 }
 
 @media (max-width: 768px) {
-    .who, .info, .redes {
+    .who, .info, .yuyu {
         padding:25px 50px;
     }
 }
